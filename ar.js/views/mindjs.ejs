@@ -1,0 +1,21 @@
+<!doctype HTML>
+<html>
+  <head> <!-- importujemy biblioteki AR.js oraz A-Frame -->
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  
+<body style="margin: 0px; overflow: hidden;">
+
+<a-scene embedded arjs>  <!-- tworzymy scene w której szukamy marker hiro i dopasuwujemy do niego asset-->
+  <a-marker preset="hiro">
+    <a-entity
+      shadow="cast: true"
+      gltf-model="assets/waving.glb"
+    ></a-entity>
+  </a-marker>
+
+  <a-entity camera></a-entity>
+</a-scene>
+</body>
+</html>
